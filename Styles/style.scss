@@ -1,0 +1,239 @@
+
+@import "top";
+@import "info";
+@import "projects";
+@import "about";
+@import "contact";
+@import "footer";
+@import "header";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+}
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.section-title{
+    font-size: 4rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    text-align: center;
+    span{
+        color: red;
+        font-weight: 500;
+    }
+}
+
+p{
+    margin-top: 10px;
+    font-size: 1.3rem;
+    text-align: left;
+    line-height: 1.9rem;
+}
+
+h2{
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+.btn{
+    color: white;
+    display: inline-block;
+    padding : 10px 30px;
+    border-radius: 25px;
+    border:4px solid crimson;
+    background-color: transparent;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: .3s ease;
+    transition-property: background-color , color;
+
+     &:hover{
+         background-color: crimson;
+         color: white;
+    }
+}
+
+//-------- MEDIA QUERRY -------//
+
+// TABLET
+@media only screen and (min-width:768px){
+    .btn {
+        font-size: 2.5rem;
+        padding: 20px 60px;
+    }
+    
+    h1.section-title{
+        font-size: 6rem;
+    }
+
+    #top{
+        h1{
+            font-size: 7rem;
+            font-weight: 300;
+        }
+    }
+
+    #information{
+        .info{
+            flex-basis: 45%;
+            margin:2.5%
+        }
+    }
+
+    #projects{
+        .project-item{
+            flex-direction: row;
+            height: 400px;
+            margin: 0;
+            width: 100%;
+            border-radius: 0;
+        }
+
+        .project-item:nth-child(even){
+            flex-direction: row-reverse;
+        }
+
+        .project-info{
+            height: 100%;
+        }
+
+        .project-img{
+            height: 100%;
+        }
+    }
+
+    #about{
+        .about{
+            flex-direction: row;
+        }
+
+        .col-left{
+            height: 400px;
+            width: 600px;
+            padding-left: 40px;
+        }
+
+        .col-right{
+            padding: 30px;
+            text-align: left;
+
+            h1{
+                text-align: left;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:1030px){
+    #contact{
+        .contact{
+            flex-direction: column;
+            padding: 100px 0;
+            text-align: center;
+            justify-content: center;
+            min-height: 20vh;
+        }
+
+        .contact-items{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            margin: 15%;
+            padding: 20px;
+        }
+
+        .contact-item{
+            flex-direction: row;
+            margin: 20px;
+
+            .icon{
+                width: 80px;
+                height: 80px;
+                img{
+                    object-fit:contain;
+                }
+            }
+        }
+
+        .contact-info{
+            width: 100%;
+            text-align: left;
+            padding-left: 30px;
+        }
+    }
+}
+
+@media only screen and (min-width:1200px){
+
+    #header{
+        .hamburger{
+            display: none;
+        }
+        
+        .nav-list{
+            ul{
+                position: initial;
+                display: block;
+                height: auto;
+                width: fit-content;
+                background-color: transparent;
+                a{
+                    font-size: 1.8rem;
+                    &::after{
+                        display: none;
+                    }
+                }
+
+                li{
+                    display: inline-block;
+                }
+            }
+        }
+    }
+
+    #information{
+        .info{
+            flex-basis: 22%;
+            margin:1.5%
+        }
+
+        .info-header{
+            max-width: 500px;
+            margin: 0 auto;
+           
+            p{
+                padding-top: 30px;
+            }
+        }
+    }
+}

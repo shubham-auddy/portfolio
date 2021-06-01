@@ -1,0 +1,38 @@
+
+@keyframes Heading_box_reveal{
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
+}
+
+@keyframes Heading_reveal{
+    100%{
+        color: white;
+        padding-left: 10px;
+    }
+}
+
+@keyframes Heading_name_reveal{
+    100%{
+        padding-left: 10px;
+        color:crimson;
+        font-weight: 500;
+        background-color: black;
+    }
+}
+
+@keyframes hamburger_box{
+    0%{
+        opacity : 1;
+        transform : scale(1);
+    }
+    100%{
+        opacity : 0;
+        transform : scale(1.4);
+    }
+}

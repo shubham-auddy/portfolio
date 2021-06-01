@@ -1,0 +1,49 @@
+#footer{
+
+    background: linear-gradient(324deg, rgb(45, 23, 23) 0%, rgba(0,0,0,1) 100%);
+
+    h1{
+        color: white;
+        font-weight: 600;
+        font-size: 1.5rem;
+        span{
+            font-weight: 600;
+            font-size: 1.5rem;
+        }
+    }
+
+    .icons{
+        margin-top: 20px;
+        display: flex;
+        // margin-bottom: 30px;
+
+        img{
+            height: 40px;
+            width: 40px;
+            padding-right: 10px;
+            transition: .3s ease;
+            margin: 0 5px;
+            filter: grayscale(1);
+           
+            &:hover{
+                transform: scale(1.4);
+                filter: grayscale(0);
+            } 
+        }
+    }
+
+    p{
+        color: white;
+        font-size: .6rem;
+        font-weight: 300;
+        margin-bottom: 0;
+        padding: 0;
+    }
+
+    .footer{
+        min-height: 200px;
+        flex-direction: column;
+        padding-top: 50px;
+        padding-bottom: 10px;        
+    }
+}
